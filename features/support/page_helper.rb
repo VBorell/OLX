@@ -7,4 +7,8 @@ module Pages
         HomePage.new
     end
 
+    def config_page
+        ConfigPage.new
+    end    
+
 end

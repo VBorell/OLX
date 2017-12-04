@@ -20,9 +20,18 @@ module Site
     class Config < SitePrism::Section
 
         #troca senha
-        element :password_previous, 'input[type=password]'
+        element :password_previous, "input[name='password[current_password]']"
         element :password_new, 'input[id=se_chPassword]'
         element :password_newrepeat, 'input[id=se_chRepeatPassword]'
-        element :password_input, 'button[id=passwordInput]'        
+        element :password_sign_in, 'button[id=passwordInput]'  
+            
+    end
+    class AnuncioBox < SitePrism::Section
+        
+        #troca senha
+      
+        element :buildins, '.icon-buildings'
+       
+                    
     end
 end

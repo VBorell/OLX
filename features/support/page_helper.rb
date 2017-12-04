@@ -9,6 +9,10 @@ module Pages
 
     def config_page
         ConfigPage.new
-    end    
+    end
+    
+    def anuncio_page
+        AnuncioPage.new
+    end
 
 end

@@ -4,13 +4,15 @@
 class ConfigPage < SitePrism::Page
     set_url 'mojekonto/ustawienia/'
 
-    section :config_password, Site::LoginBox, '#dane-logowania'
+    section :page_password, Site::Config, '#newPasswordForm'
 
+
+    element :confirm_page, '.confirm-page'  
+    
     def troca_senha
-        #self.config_password.password_previous.set('inicial2309')
-        self.config_password.password_new.set('inicial2309')
-        self.config_password.password_newrepeat.set('inicial2309')
-        self.config_password.password_input.click
-        sleep(5)
+        page_password.password_previous.set('inicial2309')
+        page_password.password_new.set('inicial2309')
+        page_password.password_newrepeat.set('inicial2309')
+        page_password.password_sign_in.click
     end
 end

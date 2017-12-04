@@ -12,11 +12,11 @@ Funcionalidade: Cliente faz login
         * login no site Otodom
 
     Cenario: Troca de senha
-        Dado que quero trocar minha
+        Dado que quero trocar minha senha
         Quando faço a atualização
         Então vejo a mensagem:
         """
-        Senha alterada com sucesso.
+        Hasło zostało zmienione.
         """
 
 

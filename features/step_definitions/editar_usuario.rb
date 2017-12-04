@@ -7,7 +7,7 @@ Dado("login no site Otodom")do
     }
 end
 
-Dado("que quero trocar minha") do
+Dado("que quero trocar minha senha") do
    config_page.load
 end
   
@@ -15,8 +15,8 @@ Quando("faço a atualização") do
   config_page.troca_senha
 end
 
-Então("vejo a mensagem:") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Então("vejo a mensagem:") do |message|
+ expect(config_page.confirm_page.text).to have_content message
 end
   
   

@@ -14,6 +14,4 @@ Funcionalidade: Fazer anuncio sem cadastro
         Então vejo a seguinte mensagem:
         """"
         Anuncio terminado com sucesso.
-        """
-
-        
+        """        

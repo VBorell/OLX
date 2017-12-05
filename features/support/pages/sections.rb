@@ -26,12 +26,47 @@ module Site
         element :password_sign_in, 'button[id=passwordInput]'  
             
     end
-    class AnuncioBox < SitePrism::Section
+    class AnuncioBox < SitePrism::Section 
+        #Cadastro de anuncio
+ 
+        element :title, 'input[id=add-title]'
+        element :price, "input[name='data[param_price][1]']"
+        element :alug,  "input[name='data[param_rent][1]']"
+        element :deposit,  "input[name='data[param_deposit][1]']"
+        element :meters, 'input[id=param7]'
+        element :owner, "#private-business-div label[for='checkbox-owner']"
+        element :film_a, "input[name='data[movie]']"
+        element :cam_virt, "input[name='data[walkaround]']"
+        element :plan_dev, "input[name='data[local_plan]']"
+        element :vist_3d, "input[name='data[3dview]']"
+        element :location, "input[class=select2-search__field]" 
+        element :description, "body[id=tinymce]"
+        element :floors, "input[id=param55]"
+        element :year_construction, "input[id='param71']"
+        element :available_from, "input[name='data[param_free_from]']"
+        element :stove, "input[id='checkbox-equipment_types-stove']"
+        element :security_alrm, "input[id='checkbox-security_types-alarm']"
+        element :telephone, "input[id='checkbox-media_types-phone']"
+        element :elevator, "input[id='checkbox-extras_types-lift']"
+        element :name_profile, "input[id='add-person']"
+        element :number_telephone, "input[id='add-phone']"
+        element :contact_email, "input[id='add-email']"
+        element :agreement, "input[id='agreement']"
+        element :accept_term, "input[id='newsletter-accept']"
+        element :preview_link, "span[id='preview-link']"
+
         
-        #troca senha
-      
-        element :buildins, '.icon-buildings'
-       
+
+        
+
+
+
+
+
+
+        
+
+
                     
     end
 end

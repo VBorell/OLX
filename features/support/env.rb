@@ -10,16 +10,18 @@ require_relative 'page_helper'
 
 World(Pages)
 
-RSpec.configure do |config|
-    config.include Capybara::DSL
+Capybara.register_driver :chrome do |app|
+    Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
+  
+#   Capybara.javascript_driver = :chrome
 
 Capybara.configure do |config|
-    config.default_driver = :selenium
+    config.default_driver = :chrome
     config.run_server = false
     config.app_host = 'https://www.otodom.pl' 
 end
 
-Capybara.default_max_wait_time = 60 
+Capybara.default_max_wait_time = 120 
 
 

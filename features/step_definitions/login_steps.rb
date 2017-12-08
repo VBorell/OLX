@@ -16,3 +16,11 @@ end
 Então("faço logout")do
   home_page.logout
 end
+
+Dado("faço login no site otodom")do
+  steps %{
+    Dado que sou cadastrado no Otodom 
+    Quando faço login 
+    Então vejo o Dashborad do site 
+  }
+end

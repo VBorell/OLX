@@ -15,4 +15,7 @@ module Pages
         AnuncioPage.new
     end
 
+    def cadastro_page
+        CadastroPage.new
+    end
 end

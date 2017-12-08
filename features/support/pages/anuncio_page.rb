@@ -1,5 +1,6 @@
 # encoding:utf-8
 
+require_relative  "../select2_helper"
 # Anuncio
 class AnuncioPage < SitePrism::Page
     set_url 'wynajem/mieszkanie/nowe-ogloszenie/'
@@ -7,6 +8,7 @@ class AnuncioPage < SitePrism::Page
     section :anuncio, Site::AnuncioBox, '.section-adding'
 
     element :anuncio_cad, '.navbar-adding'
+    element :error, '#globalError'
 
     def apart_aluguel
         sleep(2)
@@ -26,10 +28,8 @@ class AnuncioPage < SitePrism::Page
         anuncio.plan_dev.set('plano de desenvolvimento')
         anuncio.vist_3d.set('Vista 3D')
         page.execute_script "window.scrollBy(0,200)" 
-        page.execute_script "$('input[class=select2-search__field]').click()"        
-        page.fill_in "$('input[class=select2-search__field]).set('Wójcin B, opoczyński, łódzkie' )"
-        #anuncio.location.set('Wójcin B, opoczyński, łódzkie')
-        #anuncio.description.set('Informações detalhadas')
+        # select2("Wójcin B,  Opoczno, Lodz", "#select2-ftd8-container")
+        # find('#tinymce').set('Informações detalhadas')
         page.execute_script "window.scrollBy(0,500)"
         find("select[id='param15'] option[value='loft']" ).select_option        
         find("select[id='param19'] option[value='cellar']" ).select_option
@@ -48,11 +48,10 @@ class AnuncioPage < SitePrism::Page
         page.execute_script "window.scrollBy(0,500)"
         anuncio.name_profile.set('Vinicios Borel')
         anuncio.number_telephone.set('(11)984033805')
-        anuncio.contact_email.set('qachallengept2309@gmail.com')
-        page.execute_script "$('input[id=agreement]').click()"
-        page.execute_script "$('input[id=newsletter-accept]').click()"
+        #anuncio.contact_email.set('qachallengept2309@gmail.com')
+        #page.execute_script "$('input[id=agreement]').click()"
+        #page.execute_script "$('input[id=newsletter-accept]').click()"
         anuncio.preview_link.click
-        sleep(5)
+        page.execute_script "window.scrollBy(-3,400)"
     end
-   
 end

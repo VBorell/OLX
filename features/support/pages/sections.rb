@@ -40,34 +40,21 @@ module Site
         element :plan_dev, "input[name='data[local_plan]']"
         element :vist_3d, "input[name='data[3dview]']"
         element :lock, ".locationPicker .select2-selection"
-        element :location, ".select2-search__field" 
+        element :location, "#select2-ftd8-container" 
         element :description, "body[id=tinymce]"
         element :floors, "input[id=param55]"
-        element :year_construction, "input[id='param71']"
         element :available_from, "input[name='data[param_free_from]']"
-        element :stove, '#checkbox-equipment_types-stove'
-        element :security_alrm, "input[id='checkbox-security_types-alarm']"
-        element :telephone, "input[id='checkbox-media_types-phone']"
-        element :elevator, "input[id='checkbox-extras_types-lift']"
         element :name_profile, "input[id='add-person']"
         element :number_telephone, "input[id='add-phone']"
         element :contact_email, "input[id='add-email']"
-        element :agreement, "input[id='agreement']"
-        element :accept_term, "input[id='newsletter-accept']"
         element :preview_link, "span[id='preview-link']"
-
-        
-
-        
-
-
-
-
-
-
-        
-
-
-                    
+   end
+   class CadastroBox < SitePrism::Section
+    
+        element :cad_email, "input[id=userEmail]"
+        element :cad_password, "input[id=userPass]"
+        element :cad_confirm_password, "input[id=userPass-repeat]"
+                
     end
 end
+

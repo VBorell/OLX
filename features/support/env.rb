@@ -3,7 +3,6 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'rspec'
 require 'site_prism'
-require 'capybara-select2'
 
 
 

@@ -40,9 +40,8 @@ Tambems vamos precisar do Geckodriver e ChromeDriver.
 
 #Links
 
- # Geckodriver: https://github.com/mozilla/geckodriver/releases
-
- # ChromeDriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
+Geckodriver: https://github.com/mozilla/geckodriver/releases
+ChromeDriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 Apos a instalações dos drives os mesmos devem ser movimos para a pasta BIN do RUBY.
 
@@ -60,9 +59,7 @@ Com isso os testes serão iniciados automaticamente.
 
 Todos os testes são reportados como arquivo .html para a pasta reports.
 É so entrar na pasta "reports" do projeto pelo diretorio e abrir os arquivos html.
-
-
-# Espero que gostem, abraços
+...
 
 
 
